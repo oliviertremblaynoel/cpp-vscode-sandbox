@@ -1,0 +1,19 @@
+# dclint disable service-image-require-explicit-tag
+
+name: cpp
+services:
+  app:
+    image: oliviertremblaynoel/cpp-vscode-sandbox:latest
+    volumes:
+      - ${CONFIG_FOLDER}:/config
+      - ${CPP_PROJECT_FOLDER}:/sandbox
+    environment:
+      - TZ=${TZ}
+      - PROXY_DOMAIN=${URL}
+      - SUDO_PASSWORD=${SUDO_PASSWORD}
+      - PUID=1000
+      - PGID=1000
+      - DEFAULT_WORKSPACE=/sandbox
+    ports:
+      - '0.0.0.0:8443:8443'
+    restart: unless-stopped
