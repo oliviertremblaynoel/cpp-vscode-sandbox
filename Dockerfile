@@ -20,6 +20,7 @@ RUN apt-get update && \
         gdb \
         build-essential \
         manpages-dev \
+        ranger \
         && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY ./sandbox /defaults
