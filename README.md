@@ -4,4 +4,4 @@ Ready to use C++ development environment available in the browser with data pers
 
 Two containers :
 - vscode server dev container accessible in the browser
-- cpp + cmake builder for use in pipelines  
+- cpp + cmake builder for use in pipelines
